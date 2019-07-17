@@ -1,13 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Техномарт - Каталог товаров</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div class="container">
+    <header class="page-header">
+        <div class="page-header__wrapper-top padding-site">
+            <a href="#" class="logo page-header__logo">Техномарт</a>
+            <form action="http://htmlacademy.ru/echo" class="page-header__search-form" method="post">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="page-header__search-input" type="search" id="search" VALUE="Поиск:" name="search">
+                <button class="page-header__search-button" type="submit" value=""></button>
+            </form>
+            <nav class="order-menu page-header__order-menu">
+                <ul class="order-menu__list">
+                    <li class="order-menu__item">
+                        <a class="button button--bookmarks order-menu__button" href="#">
+                            Закладки:
+                            <span class="button__bookmarks-quantity">0</span>
+                        </a>
+                    </li>
+                    <li class="order-menu__item">
+                        <a class="button button--cart order-menu__button" href="#">
+                            Корзина:
+                            <span class="button__cart-quantity">0</span>
+                        </a>
+                    </li>
+                    <li class="order-menu__item">
+                        <a class="button button--order order-menu__button" href="#">Оформить заказ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page-header__wrapper-info padding-site">
+            <p class="page-header__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+            <p class="page-header__contacts">
+                <label class="visually-hidden">
+                    Телефон
+                    <input type="text" class="page-header__phone" readonly
+                           value="+7 (812) 555-05-55">
+                </label>
+                <span class="page-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+            </p>
+            <div class="logged-in-menu page-header__logged-in-menu">
+                <a href="#" class="button button--profile logged-in-menu__button">Войти</a>
+                <a href="#" class="button button--exit logged-in-menu__button">Регистрация</a>
+                <ul class="logged-in-menu__list">
+                    <li class="logged-in-menu__item">
+                        <a href="#" class="logged-in-menu__link">Мои заказы</a>
+                    </li>
+                    <li class="logged-in-menu__item">
+                        <a href="#" class="logged-in-menu__link">Личный кабинет</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="site-navigation page-header__site-navigation padding-site">
+            <ul class="site-navigation__list">
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Главная</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Компания</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="catalog.html">Каталог</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Новости</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Спецпредложения</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Доставка</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
 </body>
 </html>
