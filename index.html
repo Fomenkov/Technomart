@@ -17,19 +17,19 @@
             <form action="http://htmlacademy.ru/echo" class="page-header__search-form" method="post">
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input class="page-header__search-input" type="search" id="search" VALUE="Поиск:" name="search">
-                <button class="page-header__search-button" type="submit" value=""></button>
+                <button class="page-header__search-button page-header__search-button--red" type="submit" value=""></button>
             </form>
             <nav class="order-menu page-header__order-menu">
                 <ul class="order-menu__list">
                     <li class="order-menu__item">
                         <a class="button button--bookmarks order-menu__button" href="#">
-                            Закладки:
+                            Закладки:&nbsp;
                             <span class="button__bookmarks-quantity">0</span>
                         </a>
                     </li>
                     <li class="order-menu__item">
                         <a class="button button--cart order-menu__button" href="#">
-                            Корзина:
+                            Корзина:&nbsp;
                             <span class="button__cart-quantity">0</span>
                         </a>
                     </li>
@@ -42,11 +42,8 @@
         <div class="page-header__wrapper-info padding-site">
             <p class="page-header__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <p class="page-header__contacts">
-                <label class="visually-hidden">
-                    Телефон
-                    <input type="text" class="page-header__phone" readonly
-                           value="+7 (812) 555-05-55">
-                </label>
+                <label for="page-header__phone" class="visually-hidden">Телефон</label>
+                <input type="text" class="page-header__phone" id="page-header__phone" readonly value="+7 (812) 555-05-55">
                 <span class="page-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </p>
             <p class="login-menu page-header__login-menu">
