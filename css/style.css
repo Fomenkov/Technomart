@@ -1,4 +1,9 @@
 /* --------- global styles --------- */
+body {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
 
 .container {
     margin: 0 auto;
@@ -52,8 +57,6 @@ input[type="radio"].visually-hidden {
 .page-header {
     font-family: "Cuprum", Arial, sans-serif;
     background: url("../img/header_background.jpg") repeat;
-    /*temporary*/
-    outline: 1px solid cornflowerblue;
 }
 
 .page-header__wrapper-top {
@@ -391,3 +394,119 @@ input[type="radio"].visually-hidden {
 }
 
 /* ------------- main ----------- */
+/* ------------ Features --------- */
+
+.main-index {
+
+}
+
+.main-index__features {
+    padding-top: 60px;
+    padding-bottom: 43px;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.features__left-column-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__mini-banner {
+    margin-bottom: 20px;
+}
+
+.mini-banner {
+    padding: 25px 140px 22px 25px;
+    width: 300px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.mini-banner--materials {
+    background-color: #ffbf47;
+    background-image: url("../img/features-icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: right 10% top 50%;
+}
+
+.mini-banner--tools {
+    background-color: #3bbce3;
+    background-image: url("../img/features-icon-2.svg");
+    background-repeat: no-repeat;
+    background-position: right 10% top 50%;
+}
+.mini-banner--equipment {
+    background-color: #dc91d8;
+    background-image: url("../img/features-icon-3.svg");
+    background-repeat: no-repeat;
+    background-position: right 10% top 50%;
+}
+
+.mini-banner--discount {
+    background-color: #8ed78f;
+    background-image: url("../img/features-icon-4.svg");
+    background-repeat: no-repeat;
+    background-position: right 10% top 50%;
+}
+.mini-banner--delivery {
+    background-color: #ffc047;
+    background-image: url("../img/features-icon-5.svg");
+    background-repeat: no-repeat;
+    background-position: right 10% top 50%;
+}
+
+
+.mini-banner__headline {
+    font-family: "Cuprum", Arial, sans-serif;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.mini-banner__button {
+
+}
+
+.button--features-banner {
+    width: 135px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.button--features-banner:hover,
+.button--features-banner:focus {
+    background-color: rgba(0,0,0, 0.2);
+}
+
+.button--features-banner:active {
+    background-color: rgba(0,0,0, 0.3);
+}
+
+
+
+.features__slider {
+
+}
+
+.slider {
+    width: 620px;
+    height: 266px;
+    background-color: #ee3643;
+}
+
+
+
+
