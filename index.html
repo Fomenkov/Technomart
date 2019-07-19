@@ -11,14 +11,24 @@
 </head>
 <body>
 <div class="container">
+
+    <!-- header -->
     <header class="page-header">
+        <!-- top-->
         <div class="page-header__wrapper-top padding-site">
+            <!-- logo -->
             <a href="#" class="logo page-header__logo">Техномарт</a>
+            <!-- / logo -->
+
+            <!-- / search-form-->
             <form action="http://htmlacademy.ru/echo" class="page-header__search-form" method="post">
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input class="page-header__search-input" type="search" id="search" VALUE="Поиск:" name="search">
                 <button class="page-header__search-button page-header__search-button--red" type="submit" value=""></button>
             </form>
+            <!-- / search-form-->
+
+            <!-- order-menu -->
             <nav class="order-menu page-header__order-menu">
                 <ul class="order-menu__list">
                     <li class="order-menu__item">
@@ -38,7 +48,12 @@
                     </li>
                 </ul>
             </nav>
+            <!-- / order-menu -->
+
         </div>
+        <!-- / top-->
+
+        <!-- info -->
         <div class="page-header__wrapper-info padding-site">
             <p class="page-header__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <p class="page-header__contacts">
@@ -51,6 +66,9 @@
                 <a href="#" class="button button--registration login-menu__button">Регистрация</a>
             </p>
         </div>
+        <!-- / info -->
+
+        <!-- site-navigation-->
         <nav class="site-navigation page-header__site-navigation padding-site">
             <ul class="site-navigation__list">
                 <li class="site-navigation__item">
@@ -76,9 +94,16 @@
                 </li>
             </ul>
         </nav>
+        <!-- / site-navigation-->
+
     </header>
+    <!-- / header -->
+
+    <!-- main -->
     <main class="main-index">
         <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
+
+        <!-- features -->
         <section class="features main-index__features padding-site">
             <h2 class="visually-hidden">Наши особенности</h2>
             <div class="features__left-column">
@@ -113,6 +138,9 @@
                 </div>
             </div>
         </section>
+        <!-- / features -->
+
+        <!-- popular-products -->
         <section class="popular-products main-index__popular-products padding-site">
             <h2 class="visually-hidden">Популярные товары</h2>
             <header class="section-header popular-products__section-header">
@@ -182,7 +210,100 @@
                 </li>
             </ul>
         </section>
+        <!-- / popular-products -->
+
+        <!-- popular-brands -->
+        <section class="popular-brands main-index__popular-brands padding-site">
+            <h2 class="visually-hidden">Популярные производители</h2>
+            <header class="section-header popular-brands__section-header">
+                <b class="section-header__headline">Популярные производители:</b>
+                <a href="#" class="button button--popular section-header__button">Все производители</a>
+            </header>
+            <ul class="popular-brands__list">
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-bosch.jpg" alt="Логотип бренда BOSCH">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-makita.jpg" alt="Логотип бренда Makita">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-dewalt.jpg" alt="Логотип бренда DeWalt">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-interscol.jpg" alt="Логотип бренда Интерскол">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-hitachi.jpg" alt="Логотип бренда HITACHI">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-lg.jpg" alt="Логотип бренда LG">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-aeg.jpg" alt="Логотип бренда AEG">
+                    </a>
+                </li>
+                <li class="popular-brands__item">
+                    <a href="#" class="popular-brands__link">
+                        <img class="popular-brands__image" src="img/logo-metabo.jpg" alt="Логотип бренда Metabo">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- / popular-brands -->
+
+        <!-- about-us -->
+        <section class="about-us main-index__about-us padding-site">
+            <h2 class="visually-hidden">Подробнее о нас</h2>
+            <div class="about-us__description">
+                <h3 class="about-us__headline">Компания &laquo;Техномарт&raquo;</h3>
+                <p class="about-us__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не
+                    оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+                <p class="about-us__text">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+                    Техномарт работает со многими транспортными компаниями:
+                </p>
+                <ul class="about-us__delivery-list">
+                    <li class="about-us__delivery-item">Деловые линии</li>
+                    <li class="about-us__delivery-item">Автотрейдинг</li>
+                    <li class="about-us__delivery-item">ЖелДорЭкспедиция</li>
+                </ul>
+                <a href="#" class="button button--about-us-description">Подробнее о компании</a>
+            </div>
+            <div class="about-us__contacts">
+                <h3 class="about-us__headline">Контакты</h3>
+                <p class="about-us__text">Вы можете забрать товар сами,<br>
+                    заехав в наш офис:
+                </p>
+                <img class="about-us__map-image" src="img/map.jpg" alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+                <a href="#" class="button button--write-us">Заблудились? Напишите нам!</a>
+            </div>
+
+            <!-- modal -->
+            <section class="modal modal-map visually-hidden">
+                <h2 class="visually-hidden">Как до нас добраться</h2>
+                <p>
+                    <img src="#" alt="Офис компании по адресу: СПБ, ...">
+                </p>
+                <button class="modal-close" type="button">Закрыть</button>
+            </section>
+            <!-- / modal -->
+
+        </section>
+        <!-- / about-us -->
     </main>
+    <!-- / main -->
 </div>
 </body>
 </html>
