@@ -15,7 +15,7 @@
         <!-- top-->
         <div class="page-header__wrapper-top padding-site">
             <!-- logo -->
-            <a href="#" class="logo page-header__logo">Техномарт</a>
+            <a href="index.html" class="logo page-header__logo">Техномарт</a>
             <!-- / logo -->
 
             <!-- / search-form-->
@@ -137,7 +137,85 @@
                 <!-- filter -->
                 <section class="filter main-catalog__filter">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
-                    <p>Тут будет форма с фильтром</p>
+                    <b class="filter__title">Фильтр:</b>
+                    <form class="filter__form" action="https://htmlacademy.ru/echo" method="post"
+                          oninput="mincostuotput.value=mincost.value; maxcostuotput.value=maxcost.value">
+                        <!-- range -->
+                        <fieldset class="filter__group">
+                            <legend class="filter__group-title">Цена:</legend>
+                            <div class="filter__range-wrapper">
+                                <label class="visually-hidden" for="mincost">Минимальная стоимость</label>
+                                <input class="filter__range" id="mincost" type="range" name="mincost" value="0" min="0"
+                                       max="7000" step="100">
+                                <label class="visually-hidden" for="maxcost">Максимальная стоимость</label>
+                                <input class="filter__range" id="maxcost" type="range" name="maxcost" value="15000"
+                                       min="7000"
+                                       max="15000" step="100">
+                            </div>
+                            <div class="filter__output-wrapper">
+                                <output class="filter__output" name="mincostuotput">0</output>
+                                <output class="filter__output" name="maxcostuotput">15000</output>
+                            </div>
+                        </fieldset>
+                        <!-- / range -->
+
+                        <!-- checkbox -->
+                        <fieldset class="filter__group">
+                            <legend class="filter__group-title">Производители:</legend>
+                            <label class="filter__label">
+                                <input class="filter__checkbox visually-hidden" type="checkbox" name="BOSCH"
+                                       checked>
+                                <span class="filter__checkbox-indicator filter__checkbox-indicator--on"></span>
+                                BOSCH
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox visually-hidden" type="checkbox" name="Interskol">
+                                <span class="filter__checkbox-indicator filter__checkbox-indicator--off"></span>
+                                ИНТЕРСКОЛ
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox visually-hidden" type="checkbox" name="Makita"
+                                       checked>
+                                <span class="filter__checkbox-indicator filter__checkbox-indicator--on"></span>
+                                Makita
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox visually-hidden" type="checkbox" name="Dewalt">
+                                <span class="filter__checkbox-indicator filter__checkbox-indicator--off"></span>
+                                Dewalt
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox visually-hidden" type="checkbox" name="Hitachi">
+                                <span class="filter__checkbox-indicator filter__checkbox-indicator--off"></span>
+                                Hitachi
+                            </label>
+                        </fieldset>
+                        <!-- / checkbox -->
+
+                        <!-- radio-->
+                        <fieldset class="filter__group">
+                            <legend class="filter__group-title">Питание:</legend>
+                            <label class="filter__label">
+                                <input class="filter__radio visually-hidden" type="radio" name="power-supply-type"
+                                       value="battery" checked>
+                                <span class="filter__radio-indicator"></span>
+                                Аккумуляторные
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__radio visually-hidden" type="radio" name="power-supply-type"
+                                       value="in-socket">
+                                <span class="filter__radio-indicator"></span>
+                                Сетевые
+                            </label>
+                        </fieldset>
+                        <!-- / radio-->
+
+                        <!-- button -->
+                        <button class="button button--filter" type="submit">
+                            <span class="filter__button-text">Показать</span>
+                        </button>
+                        <!-- / button -->
+                    </form>
                 </section>
                 <!-- / filter -->
 
