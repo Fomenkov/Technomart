@@ -555,16 +555,196 @@ input[type="radio"].visually-hidden {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* === features__slider === */
 .features__slider {
 
 }
 
 .slider {
+    position: relative;
     width: 620px;
     height: 266px;
-    background-color: #ee3643;
 }
 
+.slider__radio {
+
+}
+
+.slider__arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 22px;
+    height: 40px;
+}
+
+.slider__arrow:hover {
+    cursor: pointer;
+}
+
+.slider__arrow--prev {
+    left: 25px;
+}
+
+.slider__arrow--prev::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transform: rotate(-45deg);
+    top: 9px;
+    left: -4px;
+    position: absolute;
+}
+
+.slider__arrow--prev::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transform: rotate(45deg);
+    bottom: 9px;
+    left: -4px;
+    position: absolute;
+}
+
+.slider__arrow--next {
+    right: 20px;
+}
+
+.slider__arrow--next::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transform: rotate(45deg);
+    top: 9px;
+    left: -4px;
+    position: absolute;
+}
+
+.slider__arrow--next::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transform: rotate(-45deg);
+    bottom: 9px;
+    left: -4px;
+    position: absolute;
+}
+
+.slider__toggle {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.slider__toggle:hover {
+    cursor: pointer;
+}
+
+.slider__toggle::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ee3643;
+    display: none;
+}
+
+.slider__toggle--left {
+    left: 295px;
+}
+
+.slider__toggle--right {
+    right: 295px;
+}
+
+.slider__item {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+}
+
+.slider__item--first {
+    background: url("../img/slider-power-drill.jpg") no-repeat;
+}
+
+.slider__item--second {
+    background: url("../img/slider-drill.png") no-repeat;
+}
+
+.slider__headline {
+    margin: 0 0 5px 0;
+    color: #ffffff;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.slider__text {
+    display: block;
+    max-width: 300px;
+    color: #ffffff;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 120px;
+}
+
+.slider__button {
+    position: absolute;
+    left: 25px;
+    bottom: 60px;
+}
+
+.button--slider {
+    width: 195px;
+}
+
+.button--slider:hover,
+.button--slider:focus {
+    background-color: #ca2c37;
+}
+
+.button--slider:active {
+    background-color: #ba2732;
+}
+
+.slider__radio--first:checked ~ .slider__item--first {
+    display: block;
+}
+
+.slider__radio--second:checked ~ .slider__item--second {
+    display: block;
+}
+
+.slider__radio--first:checked ~ .slider__toggle--left::before {
+    display: block;
+}
+
+.slider__radio--second:checked ~ .slider__toggle--right::before {
+    display: block;
+}
+/* === / features__slider === */
 /* === / features === */
 
 /* === popular-products === */
@@ -883,6 +1063,7 @@ input[type="radio"].visually-hidden {
     background-color: #fff;
     color: #32425c;
 }
+
 /* === / services__tabs ===*/
 
 /* === services__cards === */
@@ -920,6 +1101,7 @@ input[type="radio"].visually-hidden {
 .cards__item--delivery {
     background: url("../img/background-delivery.png") right 25px no-repeat;
 }
+
 .cards__item--warranty {
     background: url("../img/background-warranty.png") right top no-repeat;
 }
@@ -956,6 +1138,7 @@ input[type="radio"].visually-hidden {
 .button--services-card:active {
     background-color: #ba2732;
 }
+
 /* === / services__cards === */
 /* === / services === */
 
