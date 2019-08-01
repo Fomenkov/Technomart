@@ -112,7 +112,7 @@
             <h2 class="visually-hidden">Наши особенности</h2>
             <div class="features__left-column">
                 <div class="features__left-column-wrapper">
-                    <div class="mini-banner mini-banner--materials features__mini-banner">
+                    <div class="mini-banner mini-banner--materials mini-banner--new features__mini-banner">
                         <h3 class="mini-banner__headline">Материалы</h3>
                         <a href="#" class="button button--features-banner mini-banner__button">
                             <span>На любой вкус</span>
@@ -218,7 +218,7 @@
                         <span class="product-card__current-price">25500 р.</span>
                     </a>
                 </li>
-                <li class="product-card popular-products__product-card">
+                <li class="product-card product-card--new popular-products__product-card">
                     <img class="product-card__image" src="img/bgf2000.png" alt="Перфоратор BOSCH BFG 2000">
                     <div class="product-card__hover">
                         <a href="#" class="button button--buy product-card__hover-button">Купить</a>
@@ -359,21 +359,10 @@
                 <p class="about-us__text">Вы можете забрать товар сами,<br>
                     заехав в наш офис:
                 </p>
-                <img class="about-us__map-image" src="img/map.jpg"
-                     alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+                <iframe class="about-us__map" src="https://yandex.ru/map-widget/v1/-/CGa1eN~t" width="300" height="158"
+                        frameborder="1"></iframe>
                 <a href="#" class="button button--write-us">Заблудились? Напишите нам!</a>
             </div>
-
-            <!-- modal -->
-            <section class="modal modal-map visually-hidden">
-                <h2 class="visually-hidden">Как до нас добраться</h2>
-                <p>
-                    <img src="#" alt="Офис компании по адресу: СПБ, ...">
-                </p>
-                <button class="modal-close" type="button">Закрыть</button>
-            </section>
-            <!-- / modal -->
-
         </section>
         <!-- / about-us -->
 
@@ -464,6 +453,70 @@
 
     </footer>
     <!-- / footer -->
+
+    <!-- modal -->
+    <!-- write-us -->
+    <section class="modal modal--write-us">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="modal__form write-us" action="mail/sendmail.php" method="post">
+            <div class="modal__inputs-wrapper">
+                <div class="modal__columns-wrapper">
+                    <label class="modal__label">
+                        <span class="modal__label-text">Ваше имя:</span>
+                        <input class="modal__input modal__input--client-name" type="text" name="client-name"
+                               placeholder="Имя Фамилия">
+                    </label>
+                    <label class="modal__label">
+                        <span class="modal__label-text">Ваш e-mail:</span>
+                        <input class="modal__input modal__input--client-email" type="email" name="client-email"
+                               placeholder="email@example.com">
+                    </label>
+                </div>
+                <label class="modal__label">
+                    <span class="modal__label-text">Текст письма:</span>
+                    <textarea class="modal__input modal__input--client-message" name="client-message"
+                              placeholder="В свободной форме" rows="5"></textarea>
+                </label>
+            </div>
+            <div class="modal__button-wrapper">
+                <button class="button button--modal-write-us" type="submit">Отправить</button>
+            </div>
+        </form>
+        <button type="button" class="modal__close-button">
+            <img src="img/close-cross.svg" alt="Закрыть модальное окно">
+        </button>
+    </section>
+    <!-- / write-us -->
+
+    <!-- map-->
+    <section class="modal modal--map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe class="modal__map" src="https://yandex.ru/map-widget/v1/-/CGa1eN~t" width="940" height="447"
+                frameborder="1"></iframe>
+        <button type="button" class="modal__close-button modal__close-button--map">
+            <img src="img/close-cross.svg" alt="Закрыть модальное окно">
+        </button>
+    </section>
+    <!-- / map-->
+
+    <!-- cart-->
+    <section class="modal modal--cart">
+        <div class="modal__top-wrapper">
+            <h2 class="visually-hidden">Напишите нам</h2>
+            <span class="modal__notice">Товар добавлен в корзину!</span>
+        </div>
+        <div class="modal__button-wrapper">
+            <a class="button button--modal-order-now" tabindex="0">Оформить заказ</a>
+            <a class="button button--modal-continue-shopping" tabindex="0">Продолжить покупки</a>
+        </div>
+        <button type="button" class="modal__close-button">
+            <img src="img/close-cross.svg" alt="Закрыть модальное окно">
+        </button>
+    </section>
+    <!-- / cart-->
+    <!-- / modal -->
 </div>
+
+
 </body>
 </html>

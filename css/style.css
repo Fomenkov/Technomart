@@ -293,6 +293,9 @@ input[type="radio"].visually-hidden {
 
     color: #ee3643;
     background-color: #f3f7f8;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
     font-size: 21px;
     line-height: 21px;
 }
@@ -366,10 +369,36 @@ input[type="radio"].visually-hidden {
 
 .button--profile {
     width: 250px;
+    padding-left: 45px;
+    padding-right: 15px;
+    background-image: url("../img/icon-user.svg");
+    background-repeat: no-repeat;
+    background-position: 13px center;
+}
+
+.button--profile:hover,
+.button--profile:focus {
+    background-image: url("../img/icon-user-hover.svg");
+}
+
+.button--profile:active {
+    background-image: url("../img/icon-user.svg");
 }
 
 .button--exit {
     width: 50px;
+    background-image: url("../img/icon-logout.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button--exit:hover,
+.button--exit:focus {
+    background-image: url("../img/icon-logout-hover.svg");
+}
+
+.button--exit:active {
+    background-image: url("../img/icon-logout.svg");
 }
 
 .login-menu__list {
@@ -488,6 +517,22 @@ input[type="radio"].visually-hidden {
     width: 300px;
     box-sizing: border-box;
     color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-banner--new::after {
+    content: "new";
+    width: 100px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: -31px;
+    background-color: red;
+    transform: rotate(45deg);
+    justify-content: center;
+    align-items: center;
 }
 
 .mini-banner--materials {
@@ -816,7 +861,24 @@ input[type="radio"].visually-hidden {
     border: 1px solid #eaeaea;
     background-color: #ffffff;
     transition: box-shadow 0.5s;
+    overflow: hidden;
 }
+
+.product-card--new::after {
+    color: #FFFFFF;
+    content: "new";
+    width: 100px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: -31px;
+    background-color: red;
+    transform: rotate(45deg);
+    justify-content: center;
+    align-items: center;
+}
+
 
 .product-card:hover {
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
@@ -1220,8 +1282,9 @@ input[type="radio"].visually-hidden {
     max-width: 300px;
 }
 
-.about-us__map-image {
+.about-us__map {
     margin-bottom: 30px;
+    border: none;
 }
 
 .button--write-us {
@@ -1642,7 +1705,8 @@ input[type="radio"].visually-hidden {
     color: #000000;
 }
 
-.button--filter:hover {
+.button--filter:hover,
+.button--filter:focus {
     border-color: #bdc6ca;
 }
 
@@ -1833,6 +1897,235 @@ input[type="radio"].visually-hidden {
 
 /* === / main === */
 /* === / catalog-page === */
+
+/* === modal === */
+/* === write-us === */
+.modal {
+    position: fixed;
+    display: none;
+    background-color: #fff;
+}
+
+.modal--write-us {
+    bottom: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 620px;
+    margin-bottom: -215px;
+    margin-left: -310px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+    border-top: 7px solid #ff5257;
+}
+
+.modal-show {
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
+}
+
+.modal__form {
+
+}
+
+.modal__inputs-wrapper {
+    padding: 50px 80px 30px;
+}
+
+.modal__columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal__label {
+
+}
+
+.modal__label-text {
+    display: block;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.modal__input {
+    font-family: "Cuprum", Arial, sans-serif;
+    color: #999999;
+    font-size: 13px;
+    line-height: 18px;
+    border: 2px solid #d7dcde;
+
+    box-sizing: border-box;
+}
+
+.modal__input:hover {
+    border-color: #b5b5b5;
+}
+
+.modal__input:focus {
+    border-color: #ee3643;
+}
+
+.modal__input--client-name,
+.modal__input--client-email {
+    width: 220px;
+    height: 38px;
+    padding: 10px 15px;
+}
+
+.modal__input--client-message {
+    width: 100%;
+    padding: 10px 15px;
+    resize: none;
+}
+
+.modal__button-wrapper {
+    background-color: #f4f4f4;
+    padding: 37px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button--modal-write-us {
+    width: 100%;
+    border: none;
+}
+
+.button--modal-write-us:hover,
+.button--modal-write-us:focus {
+    background-color: #ca2c37;
+}
+
+.button--modal-write-us:active {
+    background-color: #ba2732;
+}
+
+.modal__close-button {
+    border: none;
+    background: none;
+    opacity: 0.3;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+}
+
+.modal__close-button:hover { opacity: 1; }
+
+.modal__close-button:active { opacity: 0.1; }
+/* === write-us === */
+
+/* === map ===*/
+.modal--map {
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.modal__map {
+    border: none;
+}
+
+.modal__close-button--map {
+    right: -40px;
+}
+/* === / map === */
+
+/* === cart === */
+.modal--cart {
+    width: 620px;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+    border-top: 7px solid #ff5257;
+}
+
+.modal__top-wrapper {
+    padding: 50px 80px;
+}
+
+.modal__notice {
+    display: flex;
+    min-height: 66px;
+    align-items: center;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 100px;
+    background: url("../img/icon-green-check.svg") left 50% no-repeat;
+}
+
+.button--modal-order-now {
+    width: 220px;
+}
+
+.button--modal-order-now:hover,
+.button--modal-order-now:focus {
+    background-color: #ca2c37;
+}
+
+.button--modal-order-now:active {
+    background-color: #ba2732;
+}
+
+.button--modal-continue-shopping {
+    width: 220px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.button--modal-continue-shopping:hover,
+.button--modal-continue-shopping:focus {
+    outline: 1px solid #bdc6ca;
+}
+
+.button--modal-continue-shopping:active {
+    outline: 1px solid #ee3643;
+}
+
+
+
+/* === / cart === */
+/* --------- animation ----------- */
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes emergence {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+/* === / modal === */
 
 /* === media === */
 
