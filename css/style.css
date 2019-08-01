@@ -1287,6 +1287,10 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
+.about-us__map:hover {
+    cursor: pointer;
+}
+
 .button--write-us {
     width: 100%;
 }
@@ -1898,6 +1902,24 @@ input[type="radio"].visually-hidden {
 /* === / main === */
 /* === / catalog-page === */
 
+/* === overlay ===*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    /*opacity: 0.8;*/
+    animation: overlay-show 1s forwards;
+    display: none;
+}
+
+.overlay--show {
+    display: block;
+}
+/* === / overlay ===*/
+
 /* === modal === */
 /* === write-us === */
 .modal {
@@ -2025,8 +2047,9 @@ input[type="radio"].visually-hidden {
 .modal--map {
     top: 50%;
     left: 50%;
+    margin-top: -223px;
+    margin-left: -470px;
     z-index: 10;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
@@ -2123,6 +2146,15 @@ input[type="radio"].visually-hidden {
 @keyframes emergence {
     from {transform: scale(0);}
     to {transform: scale(1);}
+}
+
+@keyframes overlay-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
 }
 
 /* === / modal === */
