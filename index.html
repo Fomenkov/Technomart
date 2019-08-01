@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<!-- container -->
 <div class="container">
 
     <!-- header -->
@@ -458,7 +459,7 @@
     <!-- write-us -->
     <section class="modal modal--write-us">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <form class="modal__form write-us" action="mail/sendmail.php" method="post">
+        <form class="modal__form" action="mail/sendmail.php" method="post">
             <div class="modal__inputs-wrapper">
                 <div class="modal__columns-wrapper">
                     <label class="modal__label">
@@ -516,7 +517,25 @@
     <!-- / cart-->
     <!-- / modal -->
 </div>
+<!-- / container -->
 
+<!-- scripts -->
 
+<!-- modal--write-us -->
+<script src="js/write-us-popup.js"></script>
+<!-- / modal--write-us -->
+
+<!-- jquery -->
+<script src="js/jquery-compressed.js"></script>
+<!-- / jquery -->
+
+<!-- jquery.sendmail.js -->
+<script src="js/jquery.sendmail.js"></script>
+<script>
+    $('form.modal__form').sendMail();
+</script>
+<!-- / jquery.sendmail.js -->
+
+<!-- / scripts -->
 </body>
 </html>
