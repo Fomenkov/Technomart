@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Техномарт - Каталог товаров</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
           rel="stylesheet">
@@ -9,6 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- container -->
 <div class="container">
     <!-- header -->
     <header class="page-header">
@@ -290,7 +293,7 @@
                                 <span class="product-card__current-price">25500 р.</span>
                             </a>
                         </li>
-                        <li class="product-card products-list__product-card">
+                        <li class="product-card product-card--new products-list__product-card">
                             <img class="product-card__image" src="img/bgf2000.png" alt="Перфоратор BOSCH BFG 2000">
                             <div class="product-card__hover">
                                 <a href="#" class="button button--buy product-card__hover-button">Купить</a>
@@ -322,7 +325,7 @@
                                 <span class="product-card__current-price">15500 р.</span>
                             </a>
                         </li>
-                        <li class="product-card products-list__product-card">
+                        <li class="product-card product-card--new products-list__product-card">
                             <img class="product-card__image" src="img/bgf6000.png" alt="Перфоратор BOSCH BFG 6000">
                             <div class="product-card__hover">
                                 <a href="#" class="button button--buy product-card__hover-button">Купить</a>
@@ -354,7 +357,7 @@
                                 <span class="product-card__current-price">12500 р.</span>
                             </a>
                         </li>
-                        <li class="product-card products-list__product-card">
+                        <li class="product-card product-card--new products-list__product-card">
                             <img class="product-card__image" src="img/bgf3000.png" alt="Перфоратор BOSCH BFG 3000">
                             <div class="product-card__hover">
                                 <a href="#" class="button button--buy product-card__hover-button">Купить</a>
@@ -527,6 +530,34 @@
     </footer>
     <!-- / footer -->
 
+    <!-- overlay -->
+    <div class="overlay"></div>
+    <!-- overlay -->
+
+    <!-- modal -->
+    <!-- cart -->
+    <section class="modal modal--cart">
+        <div class="modal__top-wrapper">
+            <h2 class="visually-hidden">Напишите нам</h2>
+            <span class="modal__notice">Товар добавлен в корзину!</span>
+        </div>
+        <div class="modal__button-wrapper">
+            <a href="#" class="button button--modal-order-now" tabindex="0">Оформить заказ</a>
+            <a class="button button--modal-continue-shopping" tabindex="0">Продолжить покупки</a>
+        </div>
+        <button type="button" class="modal__close-button modal__close-button--cart">
+            <img src="img/close-cross.svg" alt="Закрыть модальное окно">
+        </button>
+    </section>
+    <!-- / cart -->
+    <!-- / modal -->
 </div>
+<!-- / container -->
+
+<!-- scripts -->
+<!-- modal-cart -->
+<script src="js/cart-popup.js"></script>
+<!-- / modal-cart -->
+<!-- / scripts -->
 </body>
 </html>

@@ -168,6 +168,8 @@ input[type="radio"].visually-hidden {
     min-height: 42px;
 }
 
+
+
 .button--bookmarks {
     background-color: #293449;
     padding-left: 44px;
@@ -202,7 +204,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button__bookmarks-quantity {
-
+    width: 10px;
 }
 
 .button--cart {
@@ -210,6 +212,10 @@ input[type="radio"].visually-hidden {
     padding-left: 44px;
     position: relative;
     min-width: 150px;
+}
+
+.order-menu__button--active {
+    background-color: #ee3643;
 }
 
 .button--cart:hover,
@@ -239,7 +245,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button__cart-quantity {
-
+    width: 10px;
 }
 
 .button--order {
@@ -529,7 +535,7 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 8px;
     right: -31px;
-    background-color: red;
+    background-color: #ee3643;
     transform: rotate(45deg);
     justify-content: center;
     align-items: center;
@@ -873,7 +879,7 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 8px;
     right: -31px;
-    background-color: red;
+    background-color: #ee3643;
     transform: rotate(45deg);
     justify-content: center;
     align-items: center;
@@ -893,7 +899,7 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    z-index: 10;
+    z-index: 2;
     background-color: #fff;
     display: none;
     width: 220px;
@@ -1905,6 +1911,7 @@ input[type="radio"].visually-hidden {
 /* === overlay ===*/
 .overlay {
     position: fixed;
+    z-index: 9;
     top: 0;
     left: 0;
     width: 100vw;
@@ -1929,11 +1936,11 @@ input[type="radio"].visually-hidden {
 }
 
 .modal--write-us {
-    bottom: 50%;
+    top: 50%;
     left: 50%;
     z-index: 10;
     width: 620px;
-    margin-bottom: -215px;
+    margin-top: -215px;
     margin-left: -310px;
     box-sizing: border-box;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
@@ -2056,6 +2063,8 @@ input[type="radio"].visually-hidden {
 
 .modal__map {
     border: none;
+    width: 900px;
+    height: 447px;
 }
 
 .modal__close-button--map {
@@ -2069,7 +2078,8 @@ input[type="radio"].visually-hidden {
     top: 50%;
     left: 50%;
     z-index: 10;
-    transform: translate(-50%, -50%);
+    margin-left: -310px;
+    margin-top: -140px;
     box-sizing: border-box;
     box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
     border-top: 7px solid #ff5257;
@@ -2117,11 +2127,10 @@ input[type="radio"].visually-hidden {
 .button--modal-continue-shopping:active {
     outline: 1px solid #ee3643;
 }
-
-
-
 /* === / cart === */
-/* --------- animation ----------- */
+/* === / modal === */
+
+/* === animations === */
 @keyframes bounce {
     0% {
         transform: translateY(-2000px);
@@ -2156,8 +2165,7 @@ input[type="radio"].visually-hidden {
         opacity: 0.8;
     }
 }
-
-/* === / modal === */
+/* === / animations === */
 
 /* === media === */
 
@@ -2373,6 +2381,22 @@ input[type="radio"].visually-hidden {
         margin: 0 auto;
     }
     /* === footer === */
+
+    /* === modal === */
+    /* === map === */
+    .modal--map {
+        width: 94%;
+        left: 10px;
+        top: 10px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .modal__map {
+        width: 100%;
+    }
+    /* === / map === */
+    /* === / modal === */
 }
 
 @media (min-width: 576px) and (max-width: 767px){
@@ -2549,7 +2573,77 @@ input[type="radio"].visually-hidden {
     .page-footer__social-list {
         margin-bottom: 20px;
     }
-    /* === footer ===*/
+    /* === footer === */
+
+    /* === modal === */
+    /* === write-us === */
+    .modal--write-us {
+        width: 95%;
+        left: 10px;
+        top: 10px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .modal__inputs-wrapper {
+        padding: 20px 30px;
+    }
+
+    .modal__label {
+        width: 48%;
+    }
+
+    .modal__input {
+        width: 100%;
+    }
+
+    .modal__button-wrapper {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    /* === / write-us === */
+
+    /* === cart === */
+    .modal--cart {
+        width: 540px;
+        margin-left: -270px;
+    }
+
+    .modal__top-wrapper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .modal__button-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button--modal-order-now {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button--modal-continue-shopping {
+        width: 100%;
+    }
+    /* === / cart === */
+
+    /* === map === */
+    .modal--map {
+        width: 90%;
+        left: 10px;
+        top: 10px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .modal__map {
+        width: 100%;
+        height: 340px;
+    }
+    /* === / map === */
+    /* === / modal ===*/
 }
 
 @media (max-width: 575px) {
@@ -2588,7 +2682,7 @@ input[type="radio"].visually-hidden {
     }
 
     .site-navigation__link {
-        min-width: 100%;
+        /*min-width: 100%;*/
     }
     /* === / header === */
 
@@ -2761,5 +2855,79 @@ input[type="radio"].visually-hidden {
         margin-bottom: 20px;
     }
     /* === footer === */
+
+    /* === modal === */
+    /* === write-us === */
+    .modal--write-us {
+        width: 95%;
+        left: 10px;
+        top: 10px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .modal__inputs-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .modal__columns-wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .modal__label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .modal__input {
+        width: 100%;
+    }
+    /* === / write-us === */
+
+    /* === cart === */
+    .modal--cart {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .modal__top-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .modal__button-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button--modal-order-now {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button--modal-continue-shopping {
+        width: 100%;
+    }
+    /* === cart === */
+
+    /* === map === */
+    .modal--map {
+        width: 85%;
+        left: 10px;
+        top: 10px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .modal__map {
+        width: 100%;
+    }
+    /* === / map === */
+    /* === / modal === */
 }
 /* === / media === */

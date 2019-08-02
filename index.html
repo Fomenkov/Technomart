@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Техномарт - интернет-магазин строительных инструментов</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
           rel="stylesheet">
@@ -492,18 +493,17 @@
     </section>
     <!-- / write-us -->
 
-    <!-- map-->
+    <!-- map -->
     <section class="modal modal--map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe class="modal__map" src="https://yandex.ru/map-widget/v1/-/CGa1eN~t" width="940" height="447"
-                frameborder="1"></iframe>
+        <iframe class="modal__map" src="https://yandex.ru/map-widget/v1/-/CGa1eN~t" frameborder="1"></iframe>
         <button type="button" class="modal__close-button modal__close-button--map">
             <img src="img/close-cross.svg" alt="Закрыть модальное окно">
         </button>
     </section>
-    <!-- / map-->
+    <!-- / map -->
 
-    <!-- cart-->
+    <!-- cart -->
     <section class="modal modal--cart">
         <div class="modal__top-wrapper">
             <h2 class="visually-hidden">Напишите нам</h2>
@@ -513,24 +513,28 @@
             <a class="button button--modal-order-now" tabindex="0">Оформить заказ</a>
             <a class="button button--modal-continue-shopping" tabindex="0">Продолжить покупки</a>
         </div>
-        <button type="button" class="modal__close-button">
+        <button type="button" class="modal__close-button modal__close-button--cart">
             <img src="img/close-cross.svg" alt="Закрыть модальное окно">
         </button>
     </section>
-    <!-- / cart-->
+    <!-- / cart -->
     <!-- / modal -->
 </div>
 <!-- / container -->
 
 <!-- scripts -->
 
-<!-- modal--write-us -->
+<!-- modal-write-us -->
 <script src="js/write-us-popup.js"></script>
-<!-- / modal--write-us -->
+<!-- / modal-write-us -->
 
-<!-- modal--map -->
+<!-- modal-map -->
 <script src="js/map-popup.js"></script>
-<!-- / modal--map -->
+<!-- / modal-map -->
+
+<!-- modal-cart -->
+<script src="js/cart-popup.js"></script>
+<!-- / modal-cart -->
 
 <!-- jquery -->
 <script src="js/jquery-compressed.js"></script>

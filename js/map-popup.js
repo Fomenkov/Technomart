@@ -13,7 +13,6 @@ modalMapClose.addEventListener("click", function (evt) {   // отслежива
     evt.preventDefault();                                  // отменяем действие по умолчанию
     mapPopup.classList.remove("modal-show");               // удаляем у модального окна класс "modal-show"
     mapOverlay.classList.remove("overlay--show");
-    mapPopup.classList.remove("modal-error");              // удаляем у модального окна класс "modal-error" (на случай, если он был добавлен)
 });
 
 
@@ -23,7 +22,6 @@ window.addEventListener("keydown", function (evt) {         // отслежив�
         if (mapPopup.classList.contains("modal-show")) {    // если у окна есть класс "modal-show"
             mapPopup.classList.remove("modal-show");        // удаляем его
             mapOverlay.classList.remove("overlay--show");
-            mapPopup.classList.remove("modal-error");       // и удаляем класс "modal-error" (на случай, если он был добавлен)
         }
 
     }
